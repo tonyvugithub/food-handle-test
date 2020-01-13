@@ -9,10 +9,11 @@
     --sub-green: #6BD7DB;
     --sub-aquamarine: #7AF9DA;
     font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
 }
 
 html, body {
-    width: 90%;
+    width: 80%;
     height: 100%;
     margin: 0 auto;
     padding: 0;
@@ -71,8 +72,8 @@ ul.nav li {
 }
 
 main .icon {
-    width: 200px;
-    height: 200px;
+    width: 160px;
+    height: 160px;
 }
 
 
@@ -90,33 +91,35 @@ main {
 }
 .content p {
     font-weight: lighter;
-    opacity: 0.7;
+    opacity: 0.9;
     color: var(--sub-violet)
 }
 .content h1 {
     font-weight: 900;
-    font-size: 3rem;
+    font-size: 2rem;
     margin-top:0;
+    margin-bottom: 0.8rem;
     color: var(--main-color)
 }
 
 .button.round {
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     background-color: var(--main-color);
 }
 .button.triangle {
     position: relative;
-    left: 35px;
-    top: 25px;
+    left: 32px;
+    top: 27px;
     width:0;
     height:0;
-    border-top: 50px solid transparent;
-    border-bottom: 50px solid transparent;
-    border-left: 100px solid #fff;
+    border-top: 35px solid transparent;
+    border-bottom: 35px solid transparent;
+    border-left: 70px solid #fff;
 }
 footer {
+    line-height: 1;
     box-sizing: border-box;
     background-color: var(--main-color);
     height: 4rem;
