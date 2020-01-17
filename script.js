@@ -970,4 +970,17 @@
     redoButton.addEventListener('click', functionHelper.resetTest);
   }
   window.onload = setupEventHandlers;
+
+  const navSlide = () => {
+    const menuBar = document.querySelector('.menu-bar');
+    const nav = document.querySelector('.nav');
+  
+    menuBar.addEventListener('click', () => {
+        nav.classList.toggle('nav-link-active');
+    });
+  }
+  
+  navSlide();
 })();
+
+
