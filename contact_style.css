@@ -1,266 +1,133 @@
-/*Set the global properties*/
-html {
-    scroll-behavior: smooth;
+/** Add any CSS you need to this file. */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: "Josefin Sans", sans-serif;
+  scroll-behavior: smooth;
 }
-body{
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;  
+main {
+  margin-top: 250px;
+  min-height: calc(100vh - 151px - 235px);
 }
-
-*{
-    padding: 0;
-    margin: 0;
-}
-/*Set the min width for the body wrapper*/
-body #wrapper{
-    max-width: 960px;
-    min-width: 500px;
-    margin: 0 auto;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-
-li {
-    list-style: none;
+ul {
+  list-style: none;
 }
 
-li a {
-    text-decoration: none;
-    color: black;
-}
-/*Overflow help keep the two div inline with the nav element*/
-.nav{
-    background-color: #ffffff;
-    color: #000000;
-    overflow: hidden;
-    border-bottom: 1px solid gray;
-    height:auto;
-    text-align: center;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-/*Remove the dot symbol of list and set margin to 0*/
-.level-1{
-    margin: 0;
-    font-size: 20px;
-    padding: 10px 0 10px 0;
-}
-
-/*Display the list item on 1 line (in line)*/
-.level-1 li{
-    display: inline;
-    padding: 10px 0px;
-    margin: 0px 20px;
-}
-
-/*Remove the underline of the link for the nav bar*/
-.level-1  li  a {
-    color: #000000;
-    padding: 8px 0;
-}
-
-.level-1  li  a.active{
-    color: grey;
-    border-bottom: 3px solid black;
-}
-
-.level-1  li  a:hover{    
-    color: grey;
-    border-bottom: 3px solid black;
-}
-
-/*logo*/
-.logo{
-    padding: 10px 0 0 20px;
-}
-
-/*Remove the underline of the link for the LOGO*/
-.logo a{
-    text-decoration: none;
-    color: #000000;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-/*Add a banner photo auto adjust according to browser size*/
-.banner .banner-image{
-    width: 100%;
-    height: 250px;
-    display: block;
-}
-
-#categories{
-    margin: 0 auto;    
-    margin-top: 100px;
-    width: 304px;
-    padding: 5px;
-    border: thin dashed gray;
-}
-
-.cat-title{
-    font-size: 1.5em;
-}
-.option{
-    width: 300px;
-    margin: 5px auto;
-    text-align: center;
-    cursor: pointer;
-    padding: 10px 0px;
-    border: 2px solid grey;
-    border-radius: 8px;
-}
-
-.menu {
-    display: none;
-    width: 260px;
-    margin: 0 auto;
-    background-color: rgba(211,211,211,.2);
-    text-align: center;
-}
-
-#easy-container:hover .easy-secondary{
+form label {
   display: block;
 }
 
-#intermediate-container:hover .intermediate-secondary{
-  display: block;
+/*Contact Form CSS*/
+
+#user-info-form * {
+  box-sizing: border-box;
+  white-space: nowrap;
 }
 
-#advanced-container:hover .advanced-secondary{
-  display: block;
+#user-info-form {
+  width: 400px;
+  margin: 250px auto;
+  white-space: nowrap;
+  min-height: calc(100vh - 215px - 235px);
 }
-.test:hover {
-  font-weight: bolder;
-}
-
-/* Contact.html */
-.banner-container {
-    height: 650px;
-        /* center object(s) */
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-}
-.banner-container img{
-    width: 100%;
-    height: 650px;
-    position: absolute;
+#user-info-form div {
+  margin: 5px 0;
 }
 
-.infront {
-    background:linear-gradient(45deg,rgb(161, 236, 161),lime);
-    position: absolute;
-    width: 100%;
-    height: 650px;
-    z-index: 1;
-    opacity: 0.4;
-
+#user-info-form input,
+#user-info-form textarea {
+  padding: 5px;
+  font-size: 1.2em;
+  border: 1px solid #616f39;
+  border-radius: 5px;
 }
 
-
-.banner-container span, .banner-container a {
-    text-decoration: none;
-    text-align: center;
-   font-size: 5em;
-   z-index: 1;
-   font-weight: bolder;
-   color:white;
-   transition:font-size 1s;
+.name {
+  display: table-row;
+  flex-direction: row;
 }
 
-.banner-container a:hover {
-    font-size: 7em;
+.user-firstname-div,
+.user-lastname-div,
+.user-address-div,
+.user-postal-div,
+.user-city-div,
+.user-province-div {
+  display: table-cell;
+}
+.user-lastname-div,
+.user-postal-div,
+.user-province-div {
+  padding-left: 5px;
 }
 
-
-.banner-container span.subtitle {
-    font-weight: normal;
-    margin-top: 10px;
-    font-size: 1.2em;
+#user-firstname,
+#user-lastname,
+.contact-city,
+.contact-province,
+.buttons input[type="submit"],
+.buttons input[type="reset"] {
+  width: 197.7px;
 }
 
-
-#contact-bg {
-    width: 100%;
-    z-index: -2;
+#user-email,
+#user-phone {
+  width: 400px;
+}
+#user-address {
+  width: 295.6px;
 }
 
-#form-contact {
-    position: relative;
-    top:-650px;
-    text-align: center;
+#user-postal {
+  width: 100px;
 }
 
-input, textarea {
-    outline: none;
-    color: coral;
-    height: 3em;
-    margin: 20px 0;
-    border:none;
-    background: rgba(255, 255, 255, 0);
-    border-bottom: 2px solid coral;
+#user-info-form textarea {
+  width: 400px;
 }
 
+#user-info-form input[type="submit"] {
+  background-color: #1b1919;
+  color: white;
+}
+
+#user-info-form input[type="submit"]:hover {
+  background-color: rgb(80, 80, 80);
+  cursor: pointer;
+}
+
+#user-info-form input[type="reset"] {
+  background-color: rgb(172, 2, 2);
+  color: white;
+}
+
+#user-info-form input[type="reset"]:hover {
+  background-color: rgb(224, 40, 40);
+  cursor: pointer;
+}
+
+::-webkit-input-placeholder {
+  font-size: 16px;
+}
+::-moz-placeholder {
+  font-size: 16px;
+}
+:-ms-input-placeholder {
+  font-size: 16px;
+}
 ::placeholder {
-    font-size: 2em;
-    color:coral;
-}
-
-input[type="submit"] {
-    cursor: pointer;
-    width: 150px;
-    height: 50px;
-    color: coral;
-    border: 3px coral solid;
-    padding: 5px;
-    font-size: 1.2em;
-}
-
-#form-caption {
-    display: inline-block;
-    color:coral;
-    font-weight: bolder;
-    font-size: 3em;
-    margin-bottom: 50px;
-}
-
-/* quiz */
-#quiz-container {
-    width: 60%;
-    border: 3px  greenyellow solid;
-    padding: 1em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 2em auto;
-    box-shadow: 5px 5px gray;
-    border-radius: 5px;
-    line-height: 1.6;
-
-
-}
-.question {
-    padding: 1em;
-    background-color: rgba(173, 255, 47, 0.7);
-    font-weight: bold;
-
-}
-
-.answer {
-    margin-top: 2em;
-}
-.answer li {
-    border-radius: 5px;
-    padding: 0.5em;
-    cursor: pointer;
-    display: list-item;
-    list-style: inside;
-    margin: 1em auto;
-    display: list-item;
-    list-style-type: upper-alpha;
-}
-
-.answer li:hover {
-    color: white;
-    font-weight: bold;
-    background-color:  #85B6FF;
+  font-size: 16px;
 }
