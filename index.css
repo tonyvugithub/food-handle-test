@@ -148,3 +148,59 @@ li a {
 li a:visited {
     color: #fff
 }
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.menu-bar {
+    display: none;
+}
+
+
+.menu-bar div {
+    width: 30px;
+    height: 5px;
+    background-color: black;
+    margin: 5px;
+}
+
+
+@media screen and (max-width:1200px) {
+    .nav {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width:768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .nav {
+        position: absolute;
+        right: 0px;
+        height: 670px;
+        top: 175px;
+        background-color: rgb(91, 89, 180);
+        display: grid;
+        grid-template-rows: 50px 50px 50px 50px 50px;
+        /* flex-direction: column; */
+        align-items: center;
+        width: 60%;
+        transform: translateX(100%);
+        transition: 0.5s ease-in;
+
+    }
+
+    .menu-bar {    
+        display: block;
+        cursor: pointer;         
+    }
+
+    .nav-link-active {
+        transform: translateX(0%);
+    }
+}
