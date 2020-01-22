@@ -7,10 +7,11 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Registration</title>
   <style>
-    *{
+    * {
       padding: 0;
       margin: 0;
     }
+
     #container {
       display: flex;
       width: 800px;
@@ -19,23 +20,159 @@
 
     #location-list {
       flex: 1;
-      background-color: antiquewhite;
+      display: grid;
+      /* Added by Andrew */
+      height: 500px;
+      overflow-y: scroll;
     }
 
     #location-list div {
       margin-bottom: 20px;
+      padding: 1rem;
+      /* Added by Andrew */
+
     }
+
 
     #map {
       height: 500px;
       flex: 2;
     }
 
-  </style>
+    /* Added by Andrew */
+    #location-list div p {
+      margin-bottom: 0.5rem;
+    }
 
+    #location-list div p:first-child {
+      font-weight: bold;
+    }
+
+    #location-list div a {
+      background-color: var(--main-color);
+      padding: 0.3rem;
+    }
+
+    #location-list div a:hover {
+      background-color: var(--sub-violet);
+      color: white;
+    }
+
+    ul.nav {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+      border-radius: 5px;
+
+      background-color: var(--main-color);
+    }
+
+    ul.nav li {
+      padding: .4rem;
+      color: #fff;
+      font-weight: bold;
+      font-size: 1.6rem;
+      display: inline-block;
+      flex: 1;
+      justify-content: space-around;
+      text-align: center;
+    }
+
+    .icon {
+      width: 100px;
+      height: 100px;
+    }
+
+    header {
+      margin-bottom: 2rem;
+    }
+
+    .title {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .title>p {
+      font-size: 2rem;
+      display: flex;
+      flex-direction: column;
+      margin-left: 1rem;
+    }
+
+    .emphasis {
+      font-weight: bold;
+      color: var(--main-color);
+    }
+
+    .title .emphasis {
+      font-size: 3rem;
+    }
+
+    a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    a:visited {
+      color: black;
+    }
+
+    li a {
+      color: #fff;
+    }
+
+    li a:visited {
+      color: #fff
+    }
+
+    nav li:hover {
+      background-color: var(--sub-violet);
+    }
+
+    :root {
+      /* for rem unit */
+      font-size: 1em;
+      /* Declaring custom properties */
+      --main-color: #83d0f2;
+      --sub-violet: #7A90F9;
+      --sub-blue: #6B9CDB;
+      --sub-green: #6BD7DB;
+      --sub-aquamarine: #7AF9DA;
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.6;
+    }
+
+    /* End */
+  </style>
+  <!-- Added by Andrew -->
+  <script src="https://kit.fontawesome.com/22ac762fe5.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+  <!-- End -->
 </head>
 
 <body>
+  <!-- Added by Andrew -->
+  <header class="header">
+    <a href="./index.html">
+      <div class="title">
+        <img src="./images/logo.png" alt="logo.png" class="icon logo">
+        <p><span class="emphasis">Food Handler Test Center</span>
+        </p>
+      </div>
+      <nav>
+        <ul class="nav">
+          <li><a href="index.html" target='_blank'>Home</a></li>
+          <li><a href="test.html" target='_blank'>Test</a></li>
+          <li><a href="register.html" target='_blank'>Locations</a></li>
+          <li><a href="contact.html" target='_blank'>Contact Us</a></li>
+        </ul>
+      </nav>
+    </a>
+  </header>
+  <!-- End -->
   <div id="container">
     <div id="location-list"></div>
     <div id="map"></div>
@@ -80,7 +217,7 @@
 
     function createGoogleMapAnchor(location) {
       let a = document.createElement('a');
-      let url= `https://www.google.com/maps/place/${location.address}, ${location.city}, ${location.province} ${location.postalCode}`;
+      let url = `https://www.google.com/maps/place/${location.address}, ${location.city}, ${location.province} ${location.postalCode}`;
       url = encodeURI(url);
       a.href = url;
       a.innerText = "Check on map";

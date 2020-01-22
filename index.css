@@ -1,83 +1,3 @@
-* {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-}
-
-.menu-bar {
-    display: none;
-}
-
-
-.menu-bar div {
-    width: 30px;
-    height: 5px;
-    background-color: black;
-    margin: 5px;
-}
-
-nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    min-height: 50px;
-    background-color: rgb(91, 89, 180);
-    width: 100%;
-}
-
-.nav {  
-    display: flex;
-    width: 80%;
-    justify-content: space-around;
-    padding: .4rem;
-    color: #fff;
-    font-weight: bold;
-    font-size: 1.6rem;
-    text-align: center;
-}
-
-.nav li {
-    list-style: none;
-}
-
-@media screen and (max-width:1200px) {
-    .nav {
-        width: 80%;
-    }
-}
-
-@media screen and (max-width:768px) {
-    body {
-        overflow-x: hidden;
-    }
-
-    .nav {
-        position: absolute;
-        right: 0px;
-        height: 670px;
-        top: 175px;
-        background-color: rgb(91, 89, 180);
-        display: grid;
-        grid-template-rows: 50px 50px 50px 50px 50px;
-        /* flex-direction: column; */
-        align-items: center;
-        width: 60%;
-        transform: translateX(100%);
-        transition: 0.5s ease-in;
-
-    }
-
-    .menu-bar {    
-        display: block;
-        cursor: pointer;         
-    }
-
-    .nav-link-active {
-        transform: translateX(0%);
-    }
-}
-
-/* Them phan ben tren */
 
 :root{
     /* for rem unit */
@@ -93,12 +13,19 @@ nav {
 }
 
 html, body {
-    /* width: 1000px; */
+    width: 90%;
     height: 100%;
     margin: 0 auto;
     padding: 0;
 }
+main {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
 
+/* homepage */
 .icon {
     width: 100px;
     height: 100px;
@@ -112,9 +39,6 @@ header {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-
-    /* Add them: */
-    min-width: 960px;
 }
 
 .title>p {
@@ -132,18 +56,17 @@ header {
     font-size: 3rem;
 }
 
-/* ul.nav {
+ul.nav {
     list-style: none;
     display:flex;
     margin: 0;
     padding: 0;
-    border: 1px var(--main-color) solid;
     border-radius: 5px;
+    cursor: pointer;
     background-color: var(--main-color);
-} */
+}
 
-/* ul.nav li {
-    
+ul.nav li {
     padding: .4rem;
     color: #fff;
     font-weight: bold;
@@ -152,20 +75,11 @@ header {
     flex:1;
     justify-content: space-around;
     text-align: center;
-} */
+}
 
 main .icon {
     width: 160px;
     height: 160px;
-}
-
-
-main {
-    /* width: 90%; */
-    margin: 0px 100px 0px 100px;
-
-    /* Add them: */
-    min-width: 960px;
 }
 
 .square {
@@ -176,7 +90,6 @@ main {
     margin-bottom: 5rem;
 }
 .content p {
-    font-weight: lighter;
     opacity: 0.9;
     color: var(--sub-violet)
 }
@@ -233,4 +146,8 @@ li a {
 
 li a:visited {
     color: #fff
+}
+
+nav li:hover {
+    background-color: var(--sub-violet);
 }
