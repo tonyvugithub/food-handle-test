@@ -2,53 +2,130 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>Contact us</title>
-    <link rel="stylesheet" href="contact_style.css" type="text/css">
-
+  <meta charset="utf-8">
+  <title>Contact us</title>
+  <link rel="stylesheet" href="contact_style.css" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" rel="stylesheet" />
+   <!-- HTML head -->
+   <script src="https://kit.fontawesome.com/22ac762fe5.js" crossorigin="anonymous"></script>
+   <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+   <!-- End -->
 </head>
 
 <body>
-    <header>
-        <nav class="nav">
-            <div class="logo">
-                <a href="index.html">Logo</a>
-            </div>
-            <div class="nav-bar">
-                <ul class="level-1">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="test.html">Test</a></li>
-                    <li><a href="#">Register</a></li>
-                    <li><a href="contact.html" class="active">Contact</a></li>
-                    <li><a href="#">Search</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <main></main>
-        <section class="banner-container">
-            <img class="banner" src="images/contact.jpg">
-            <div class="infront"></div>
-            <a href="#form-caption">Get in touch!</a>
-            <span class="subtitle">We'd love to hear from you.</span>
-        </section>
+    <!-- HTML body -->
+    <header class="header">
+      <a href="./index.html">
+        <div class="title">
+          <img src="./images/logo.png" alt="logo.png" class="icon logo">
+          <p><span class="emphasis">Food Handler Test Center</span>
+          </p>
         </div>
-        <section id="contact-box"></section>
-            <div style="height: 500px;">
-                <img id="contact-bg" src="https://images.unsplash.com/photo-1498579809087-ef1e558fd1da?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="" class="cover">
-                <form id="form-contact" action="mailto:phongnguyentuan20@gmail.com" method="POST">
-                    <label id="form-caption" for="form-contact">Contact Us</label>
-                    <br>
-                    <input type="email" name="email" placeholder="Your Email" size="110" required>
-                    <br>
-                    <textarea name="mess" id="mess" cols="100" placeholder="Your Message" required></textarea>
-                    <br>
-                    <input type="submit" value="Submit">
-                </form>
-            </div>
-        
-        </section>
-    </main>
+        <nav>
+          <ul class="nav">
+            <li><a href="index.html" target='_blank'>Home</a></li>
+            <li><a href="test.html" target='_blank'>Test</a></li>
+            <li><a href="register.html" target='_blank'>Locations</a></li>
+            <li><a href="contact.html" target='_blank'>Contact Us</a></li>
+          </ul>
+        </nav>
+      </a>
+    </header>
+    <!-- End -->
+  <main>
+    <form id="user-info-form" name="userform" action="https://httpbin.org/post" method="POST">
+      <h1 class="form-title" style="color: #6B9CDB;">Contact Us</h1>
+      <p style="margin-bottom: 20px;">
+        Please fill this form below. All fields are required
+      </p>
+      <div class="name">
+        <div class="user-firstname-div">
+          <label for="user-firstname">First name:</label>
+          <input id="user-firstname" name="firstname" type="text" tabindex="0" placeholder="First Name..." autofocus
+            required />
+        </div>
+        <div class="user-lastname-div">
+          <label for="user-lastname">Last name:</label>
+          <input id="user-lastname" name="lastname" type="text" tabindex="0" placeholder="Last Name..." required />
+        </div>
+      </div>
+      <div class="user-email">
+        <label for="user-email">Email:</label>
+        <input id="user-email" name="email" autocomplete="email" type="email" tabindex="0"
+          placeholder="someone@example.com" maxlength="1024" required />
+      </div>
+      <div class="address-postal">
+        <div class="user-address-div">
+          <label for="user-address">Address:</label>
+          <input id="user-address" name="address" type="text" tabindex="0" placeholder="Address..." maxlength="1024"
+            required />
+        </div>
+        <div class="user-postal-div">
+          <label for="user-postal">Postcode:</label>
+          <input id="user-postal" name="postalcode" type="text" tabindex="0" autocomplete="postal-code"
+            placeholder="A1B-2C3" maxlength="7" pattern="[a-zA-Z][0-9][[a-zA-Z] ?[0-9][a-zA-Z][0-9]" required />
+        </div>
+      </div>
+      <div class="city-province">
+        <div class="user-city-div">
+          <label for="user-city">City:</label>
+          <input id="user-city" class="contact-city" type="text" list="contact-city" name="city" placeholder="City..."
+            tabindex="0" required />
+          <datalist id="contact-city">
+            <option value="Toronto"> </option>
+            <option value="Montreal"> </option>
+            <option value="Ottawa"> </option>
+            <option value="Quebec City"> </option>
+            <option value="Vancouver"> </option>
+            <option value="Calgary"> </option>
+            <option value="Edmonton"> </option>
+          </datalist>
+        </div>
+        <div class="user-province-div">
+          <label for="user-province">Province:</label>
+          <input id="user-province" class="contact-province" type="text" list="contact-province" name="province"
+            placeholder="Province..." tabindex="0" required />
+          <datalist id="contact-province">
+            <option value="ON"></option>
+            <option value="QC"></option>
+            <option value="NS"></option>
+            <option value="NB"></option>
+            <option value="MB"></option>
+            <option value="BC"></option>
+            <option value="PE"></option>
+            <option value="SK"></option>
+            <option value="AB"></option>
+            <option value="NL"></option>
+          </datalist>
+        </div>
+      </div>
+      <div class="user-phone">
+        <label for="user-phone">Telephone</label>
+        <input id="user-phone" name="phone" autocomplete="tel" type="tel" tabindex="0" placeholder="Phone Number..."
+          pattern="\(?[2-9][0-9]{2}\)?( |-)?[0-9]{3}( |-)?[0-9]{4}" required />
+      </div>
+      <div class="question-phone">
+        <label for="question-phone" style="margin-right: 15px;">Would you like us to call you? If yes, please
+          check.</label>
+        <input id="question-phone" name="question-phone" type="checkbox" value="1" tabindex="0" />
+      </div>
+      <div class="textarea">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="10" tabindex="0" placeholder="Please type your message here?"
+          required></textarea>
+      </div>
+      <div class="buttons">
+        <input type="submit" name="Submit" value="Submit" tabindex="0" />
+        <input type="reset" name="Reset" value="Reset" tabindex="0" />
+      </div>
+      <div class="hidden">
+        <input type="hidden" name="student-name" value="Khoi Nguyen Vu (Tony)" />
+        <input type="hidden" name="student-number" value="126915164" />
+      </div>
+    </form>
+  </main>
 </body>
 
 </html>
